@@ -1,0 +1,76 @@
+
+/* Universal Styles */
+
+body {
+  font-family: 'Roboto Slab', serif;
+}
+
+/* Wrapper Styles */
+
+.outer-body-wrapper {
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+
+.inner-body-wrapper {
+  grid-column: 2 / span 8;
+}
+
+/* Sidebar Styles */
+
+.sidebar {
+  border: 2px solid black;
+  grid-column: 1;
+}
+
+.profile {
+  border-bottom: 2px solid black;
+  padding: 10px;
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin: 10px 0 0 10px;
+}
+
+.profile h4 {
+  margin-top: 5px;
+}
+
+.side-main-nav {
+  border-bottom: 2px solid black;
+  padding: 10px;
+  height: 300px;
+}
+
+.admin {
+  border-bottom: 2px solid black;
+  padding: 10px;
+  height: 300px;
+}
+
+.categories {
+  padding: 10px;
+  height: 800px;
+}
+
+/* Header Styles */
+
+.top-header {
+  border: 2px solid black;
+  grid-column: 2 / span 8;
+  height: 300px;
+}
+
+
+/* Main Styles */
+
+main {
+  border: 2px solid black;
+  grid-column: 2 / span 8;
+}
+
+
+/* Media Queries */ 

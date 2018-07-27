@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Tanj McMeans - Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="normalize.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+  <div class="outer-body-wrapper">
+    <aside class="sidebar">
+      <section class="profile">
+        <img src="assets/TanjMcMeans.jpg" alt="user profile image">
+        <h4>Tanj McMeans <i class="fas fa-caret-down"></i></h4>
+      </section>
+      <section class="side-main-nav">
+        <h5>Main</h5>
+        <nav>
+          <i class="fas fa-home"></i><a href="#">HOME</a>
+          <i class="fas fa-briefcase"></i><a href="#">JOBS</a>
+          <i class="fas fa-file-alt"></i><a href="#">RESUMES</a>
+          <i class="fas fa-tasks"></i><a href="#">TASKS</a>
+          <i class="far fa-calendar-alt"></i><a href="#">CALENDAR</a>
+        </nav>
+      </section>
+      <section class="admin">
+        <h5>Admin</h5>
+          <nav>
+            <i class="fas fa-users"></i><a href="#">USERS</a>
+            <i class="fas fa-map-marker-alt"></i><a href="#">LOCATIONS</a>
+            <i class="fas fa-code-branch"></i><a href="#">WORKFLOWS</a>
+            <i class="fas fa-chalkboard"></i><a href="#">JOB BOARDS</a>
+            <i class="far fa-comments"></i><a href="#">SOCIAL</a>
+          </nav>
+      </section>
+      <section class="categories">
+        <h5>Categories</h5>
+        <i class="fas fa-check-square"></i><p>Administrative</p>
+        <i class="fas fa-square"></i><p>Design</p>
+        <i class="fas fa-square"></i><p>Executive</p>
+        <i class="fas fa-square"></i><p>Human Resources</p>
+      </section>
+    </aside>
+    <!-- HEADER --> 
+    <div class="inner-body-wrapper">
+      <header class="top-header">
+        <section class="search-bar">
+          <i class="fas fa-caret-left"></i>
+          <i class="fas fa-bars"></i>
+          <form class="search" role="search bar">
+            <i class="fas fa-search"></i>
+            <input id="search-bar" type="search" placeholder="Search for a job, task or resume">
+          </form>
+          <i class="fas fa-user-plus"></i>
+          <i class="far fa-calendar-plus"></i>
+          <i class="fas fa-th"></i>
+        </section>
+        <section class="title-group">
+          <h1>UI/UX Engineer</h1>
+          <p><i class="fas fa-map-marker-alt"></i>New York, NY<i class="fas fa-circle"></i></p>
+          <a href="#">Preview this post</a>
+          <button class="open-btn"><i class="fas fa-circle"></i>Open</button>
+          <button class="bookmark-btn"><i class="fas fa-bookmark"></i></button>
+          <button class="header-edit-btn"><i class="fas fa-pencil-alt"></i></button>
+          <button class="trash-btn"><i class="fas fa-trash-alt"></i></button>
+        </section>
+        <section class="main-nav">
+          <nav>
+            <a href="#">SUMMARY</a>
+            <a href="#">APPLICANTS</a>
+            <a href="#">JOB BOARD</a>
+            <a href="#">INTERVIEWS</a>
+            <a href="#">ACTIVITY</a>
+            <a href="#">BROADCAST</a>
+            <a href="#">NOTIFICATIONS</a>
+          </nav>
+        </section>
+      </header>
+      <!-- MAIN --> 
+      <main>
+          <i class="fas fa-chevron-circle-up"></i>
+        <!-- STATS SECTION -->
+        <section class="stats-section">
+            <button class="totals-btn"><i class="fas fa-circle"></i>TOTALS out of 5,000 views</button>
+            <button class="applicants-btn">APPLICANTS/DAY</button>
+        </section>
+        <!-- JOB DESCRIPTION SECTION-->
+        <article class="job-description-section">
+          <header="job-description-header">
+            <h3>JOB DESCRIPTION</h3>
+            <button class="job-edit-btn"><i class="fas fa-pencil-alt"></i>EDIT</button>
+          </header>
+          <section class="job-details">
+            <h4 class="position-title">POSITION TITLE</h4>
+            <p>UI/UX Engineer</p>
+            <h4 class="location-title">LOCATION</h4>
+            <p>New York, NY</p>
+            <h4 class="employment-title">EMPLOYMENT TYPE</h4>
+            <p>Full-time</p>
+            <h4 class="experience-title">EXPERIENCE</h4>
+            <p>Mid-level</p>
+            <h4 class="status-title">STATUS</h4>
+            <p>Open</p>
+            <h4 class="description-title">DESCRIPTION</h4>
+            <p>UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you. Ultimately, you’ll create both functional and appealing features that address our clients’ needs and help us grow our customer base.</p>
+            <h4 class="hiring-lead-title">HIRING LEAD</h4>
+            <p><img src="#" alt="hiring lead profile image">Steve Jobs</p>
+            <h4 class="approved-salary-title">APPROVED SALARY</h4>
+            <p>$350,000</p>
+          </section>
+        </article>
+        <!-- SOCIAL MEDIA SECTION-->
+        <aside class="social-media">
+          <button class="facebook-btn"><i class="fab fa-facebook-f"></i>Post to Facebook</button>
+          <button class="twitter-btn"><i class="fab fa-twitter"></i>Tweet this Job</button>
+          <button class="linkedin-btn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
+          <h3><i class="fas fa-globe-asia"></i>Link to this Job</h3>
+          <p class="social-section-text">Share this job posting with others looking for this position by copying the active link below.</p>
+          <form class="job-link" role="job link">
+            <input id="job-link" type="text" name="job-link" placeholder="https://www.sharelink.com">
+            <button class="copy-btn">Copy</button>
+          </form>
+          <hr>
+          <h3><i class="fas fa-camera-retro"></i> Use the Button Widget</h3>
+          <p class="social-section-text">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+          <form class="share-widget" role="share widget">
+            <input id="share-job" type="text" name="share-job" placeholder="<script>javascript_src=share-job</script>">
+            <button class="copy-btn">Copy</button>
+          </form>
+          <hr>
+          <h3><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h3>
+          <p class="social-section-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+          <form class="upload-resume" role="resume upload">
+            <input id="email-resume" type="text" name="email-resume" placeholder="soAndso@gmail.com">
+          </form>
+        </aside>
+      </main>
+    </div>
+  </div>
+  </body>
+</html>
