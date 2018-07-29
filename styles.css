@@ -102,7 +102,7 @@ body {
   border: 2px solid black;
   width: 80px;
   height: 80px;
-  font-size: 1.8em;
+  font-size: 1.5em;
   text-align: center;
 }
 
@@ -178,10 +178,12 @@ body {
 .open-btn {
   border-radius: 20px;
   text-transform: uppercase;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .open-btn i {
-  color: green;
+  color: #6FC494;
   margin-right: 5px;
 }
 
@@ -230,7 +232,6 @@ main {
 }
 
 .pie-chart-section {
-  grid-column: 1 / span 3; 
   width: 60%;
   height: 300px;
 }
@@ -241,7 +242,7 @@ main {
 }
 
 .single-chart {
-  width: 33%;
+  width: 31%;
   justify-content: space-around;
 }
 
@@ -285,14 +286,14 @@ main {
 
 .applicants-num, .interviews-num, .forwards-num {
   fill: #666;
-  font-family: sans-serif;
+  font-family: 'Overpass', sans-serif;
   font-size: 0.5em;
   text-anchor: middle;
 }
 
 .applicants, .interviews, .forwards {
   fill: #666;
-  font-family: sans-serif;
+  font-family: 'Overpass', sans-serif;
   font-size: 0.2em;
   text-anchor: middle;
 }
@@ -310,5 +311,94 @@ main {
   font-size: 5px;
 }
 
+.bar-graph-section {
+  width: 40%;
+  height: 300px;
+}
+
+.applicants-btn {
+  width: 200px;
+  display: block;
+  text-align: center;
+  border-radius: 20px;
+  margin: 10px auto 0 auto;
+  padding: 5px;
+}
+
+.job-main-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 50px;
+}
+/* Job Description Section Styles */ 
+
+.job-description-section {
+  grid-column: 1 / span 3;
+  border: 2px solid black;
+}
+
+/* Social Media Section Styles */ 
+.social-media {
+  grid-column: 4;
+}
+
+.facebook-btn, .twitter-btn, .linkedin-btn {
+  width: 100%;
+  padding: 10px;
+}
+
+.social-media button  {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+.social-media button > i {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+.social-media hr {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.social-media h3 > i {
+  margin-right: 5px;
+}
+
+.social-media p {
+  text-align: justify;
+}
+
+.social-media form {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 20px;
+}
+
+.social-media input[type=text] {
+  font-size: 0.8em;
+  height: 20px;
+  width: 80%;
+}
 
 /* Media Queries */ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

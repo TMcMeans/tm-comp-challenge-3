@@ -6,6 +6,64 @@
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Overpass:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <!-- Google Charts Scripts-->
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['corechart']});
+          google.charts.setOnLoadCallback(drawChart);
+          function drawChart() {
+            var dataTable = new google.visualization.DataTable();
+            dataTable.addColumn('string', 'Day');
+            dataTable.addColumn('number', 'Applicants');
+            dataTable.addRows([
+              ['S', 53],
+              ['M', 251],
+              ['T', 387],
+              ['W', 401],
+              ['T', 290],
+              ['F', 354],
+              ['S', 112],
+              ['S', 33],
+              ['M', 458],
+              ['T', 370],
+              ['W', 454],
+              ['T', 270],
+              ['F', 143],
+              ['S', 92]
+            ]);
+            var options = {
+              animation: {
+              duration: 2000,
+              easing: 'linear',
+              startup: true
+          },
+              width: 510,
+              height: 200,
+              legend: 'none',
+              colors: ['#6FC494'],
+              backgroundColor: 'transparent',
+              fontName: 'Overpass',
+              fontSize: 13,
+              tooltip: {textStyle: {color: 'black'}},
+              bar: { groupWidth: '50%' },
+              hAxis: {
+                baselineColor: 'black',
+                gridlines: {
+                  color: 'red'
+                }
+              },
+              vAxis: {
+                baselineColor: 'black',
+                ticks: [0, 100, 200, 300, 400, 500],
+                gridlines: {
+                  color: 'transparent'
+                }
+              }
+            };
+            var chart = new google.visualization.ColumnChart(document.getElementById('barGraph'));
+            chart.draw(dataTable, options);
+          }
+    </script>
   </head>
   <body>
     <!-- SIDEBAR -->
@@ -149,6 +207,7 @@
           <button class="totals-btn">TOTALS <i class="fas fa-circle"></i> out of 5,031 views</button>
           </div>
           <div class="bar-graph-section">
+            <div id="barGraph"></div>
             <button class="applicants-btn">APPLICANTS/DAY</button>
           </div>
         </section>
@@ -158,55 +217,57 @@
           <hr>
         </div>
         <!-- JOB DESCRIPTION SECTION-->
-        <article class="job-description-section">
-          <header="job-description-header">
-            <h3>JOB DESCRIPTION</h3>
-            <button class="job-edit-btn"><i class="fas fa-pencil-alt"></i>EDIT</button>
-          </header>
-          <section class="job-details">
-            <h4 class="position-title">POSITION TITLE</h4>
-            <p>UI/UX Engineer</p>
-            <h4 class="location-title">LOCATION</h4>
-            <p>New York, NY</p>
-            <h4 class="employment-title">EMPLOYMENT TYPE</h4>
-            <p>Full-time</p>
-            <h4 class="experience-title">EXPERIENCE</h4>
-            <p>Mid-level</p>
-            <h4 class="status-title">STATUS</h4>
-            <p>Open</p>
-            <h4 class="description-title">DESCRIPTION</h4>
-            <p>UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you. Ultimately, you’ll create both functional and appealing features that address our clients’ needs and help us grow our customer base.</p>
-            <h4 class="hiring-lead-title">HIRING LEAD</h4>
-            <p><img src="#" alt="hiring lead profile image">Steve Jobs</p>
-            <h4 class="approved-salary-title">APPROVED SALARY</h4>
-            <p>$350,000</p>
-          </section>
-        </article>
-        <!-- SOCIAL MEDIA SECTION-->
-        <aside class="social-media">
-          <button class="facebook-btn"><i class="fab fa-facebook-f"></i>Post to Facebook</button>
-          <button class="twitter-btn"><i class="fab fa-twitter"></i>Tweet this Job</button>
-          <button class="linkedin-btn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
-          <h3><i class="fas fa-globe-asia"></i>Link to this Job</h3>
-          <p class="social-section-text">Share this job posting with others looking for this position by copying the active link below.</p>
-          <form class="job-link" role="job link">
-            <input id="job-link" type="text" name="job-link" placeholder="https://www.sharelink.com">
-            <button class="copy-btn">Copy</button>
-          </form>
-          <hr>
-          <h3><i class="fas fa-camera-retro"></i> Use the Button Widget</h3>
-          <p class="social-section-text">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
-          <form class="share-widget" role="share widget">
-            <input id="share-job" type="text" name="share-job" placeholder="<script>javascript_src=share-job</script>">
-            <button class="copy-btn">Copy</button>
-          </form>
-          <hr>
-          <h3><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h3>
-          <p class="social-section-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
-          <form class="upload-resume" role="resume upload">
-            <input id="email-resume" type="text" name="email-resume" placeholder="soAndso@gmail.com">
-          </form>
-        </aside>
+        <div class="job-main-wrapper" role="main section styling container">
+          <article class="job-description-section">
+            <header="job-description-header">
+              <h3>JOB DESCRIPTION</h3>
+              <button class="job-edit-btn"><i class="fas fa-pencil-alt"></i>EDIT</button>
+            </header>
+            <section class="job-details">
+              <h4 class="position-title">POSITION TITLE</h4>
+              <p>UI/UX Engineer</p>
+              <h4 class="location-title">LOCATION</h4>
+              <p>New York, NY</p>
+              <h4 class="employment-title">EMPLOYMENT TYPE</h4>
+              <p>Full-time</p>
+              <h4 class="experience-title">EXPERIENCE</h4>
+              <p>Mid-level</p>
+              <h4 class="status-title">STATUS</h4>
+              <p>Open</p>
+              <h4 class="description-title">DESCRIPTION</h4>
+              <p>UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you. Ultimately, you’ll create both functional and appealing features that address our clients’ needs and help us grow our customer base.</p>
+              <h4 class="hiring-lead-title">HIRING LEAD</h4>
+              <p><img src="#" alt="hiring lead profile image">Steve Jobs</p>
+              <h4 class="approved-salary-title">APPROVED SALARY</h4>
+              <p>$350,000</p>
+            </section>
+          </article>
+          <!-- SOCIAL MEDIA SECTION-->
+          <aside class="social-media">
+            <button class="facebook-btn"><i class="fab fa-facebook-f"></i>Post to Facebook</button>
+            <button class="twitter-btn"><i class="fab fa-twitter"></i>Tweet this Job</button>
+            <button class="linkedin-btn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
+            <h3><i class="fas fa-globe-asia"></i>Link to this Job</h3>
+            <p class="social-section-text">Share this job posting with others looking for this position by copying the active link below.</p>
+            <form class="job-link" role="job link">
+              <input id="job-link" type="text" name="job-link" placeholder="https://www.sharelink.com">
+              <button class="copy-btn">Copy</button>
+            </form>
+            <hr>
+            <h3><i class="fas fa-camera-retro"></i> Use the Button Widget</h3>
+            <p class="social-section-text">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
+            <form class="share-widget" role="share widget">
+              <input id="share-job" type="text" name="share-job" placeholder="<script>javascript_src=share-job</script>">
+              <button class="copy-btn">Copy</button>
+            </form>
+            <hr>
+            <h3><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h3>
+            <p class="social-section-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
+            <form class="upload-resume" role="resume upload">
+              <input id="email-resume" type="text" name="email-resume" placeholder="soAndso@gmail.com">
+            </form>
+          </aside>
+        </div>
       </main>
     </div>
   </div>
