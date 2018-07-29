@@ -4,12 +4,12 @@
     <title>Tanj McMeans - Dashboard</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="normalize.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Overpass:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
   </head>
   <body>
     <!-- SIDEBAR -->
-  <div class="outer-body-wrapper">
+  <div class="outer-body-wrapper" role="outer body styling container">
     <aside class="sidebar">
       <section class="profile">
         <img src="assets/TanjMcMeans.jpg" alt="user profile image">
@@ -37,18 +37,22 @@
       </section>
       <section class="categories">
         <h5>Categories</h5>
-        <i class="fas fa-check-square"></i><p>Administrative</p>
-        <i class="fas fa-square"></i><p>Design</p>
-        <i class="fas fa-square"></i><p>Executive</p>
-        <i class="fas fa-square"></i><p>Human Resources</p>
+        <nav>
+          <i class="fas fa-check-square"></i><a>Administrative</a>
+          <i class="fas fa-square"></i><a>Design</a>
+          <i class="fas fa-square"></i><a>Executive</a>
+          <i class="fas fa-square"></i><a>Human Resources</a>
+      </nav>
       </section>
     </aside>
     <!-- HEADER --> 
-    <div class="inner-body-wrapper">
+    <div class="inner-body-wrapper" role="inner body styling container">
       <header class="top-header">
         <section class="search-bar">
-          <i class="fas fa-caret-left"></i>
-          <i class="fas fa-bars"></i>
+          <div class="hamburger-wrapper" role="container for hamburger menu">
+            <i class="fas fa-caret-left"></i>
+            <i class="fas fa-bars"></i>
+          </div>
           <form class="search" role="search bar">
             <i class="fas fa-search"></i>
             <input id="search-bar" type="search" placeholder="Search for a job, task or resume">
@@ -59,12 +63,18 @@
         </section>
         <section class="title-group">
           <h1>UI/UX Engineer</h1>
-          <p><i class="fas fa-map-marker-alt"></i>New York, NY<i class="fas fa-circle"></i></p>
-          <a href="#">Preview this post</a>
-          <button class="open-btn"><i class="fas fa-circle"></i>Open</button>
-          <button class="bookmark-btn"><i class="fas fa-bookmark"></i></button>
-          <button class="header-edit-btn"><i class="fas fa-pencil-alt"></i></button>
-          <button class="trash-btn"><i class="fas fa-trash-alt"></i></button>
+          <div class="location-marker-wrapper" role="location marker wrapper"> 
+            <i class="fas fa-map-marker-alt"></i><p>New York, NY</p><i class="fas fa-circle"></i>
+            <a href="#">Preview this post</a>
+          </div>   
+          <div class="header-buttons-wrapper" role="header buttons wrapper">
+            <div class="header-buttons-flex" role="flex wrapper for header buttons">
+              <button class="open-btn"><i class="fas fa-circle"></i>Open</button>
+              <button class="bookmark-btn"><i class="fas fa-bookmark"></i></button>
+              <button class="header-edit-btn"><i class="fas fa-pencil-alt"></i></button>
+              <button class="trash-btn"><i class="fas fa-trash-alt"></i></button>
+            </div>
+          </div>
         </section>
         <section class="main-nav">
           <nav>
@@ -80,12 +90,73 @@
       </header>
       <!-- MAIN --> 
       <main>
-          <i class="fas fa-chevron-circle-up"></i>
         <!-- STATS SECTION -->
         <section class="stats-section">
-            <button class="totals-btn"><i class="fas fa-circle"></i>TOTALS out of 5,000 views</button>
+          <div class="pie-chart-section">
+            <div class="stats-flex-wrapper">
+              <div class="single-chart">
+                <svg viewbox="0 0 36 36" class="circular-chart blue">
+                  <path class="circle-bg"
+                   d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="90, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="applicants-num">3,154</text>
+                <text x="18" y="25.35" class="applicants">APPLICANTS</text>
+              </svg>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart green">
+                <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="60, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="interviews-num">1,965</text>
+                <text x="18" y="25.35" class="interviews">INTERVIEWS</text>
+              </svg>
+            </div>
+            <div class="single-chart">
+              <svg viewbox="0 0 36 36" class="circular-chart orange">
+                <path class="circle-bg"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <path class="circle"
+                  stroke-dasharray="30, 100"
+                  d="M18 2.0845
+                    a 15.9155 15.9155 0 0 1 0 31.831
+                    a 15.9155 15.9155 0 0 1 0 -31.831"
+                />
+                <text x="18" y="20.35" class="forwards-num">912</text>
+                <text x="18" y="25.35" class="forwards">FORWARDS</text>
+              </svg>
+            </div>
+          </div>  
+          <button class="totals-btn">TOTALS <i class="fas fa-circle"></i> out of 5,031 views</button>
+          </div>
+          <div class="bar-graph-section">
             <button class="applicants-btn">APPLICANTS/DAY</button>
+          </div>
         </section>
+        <div class="divider-line" role="divider line break">
+          <hr>
+          <i class="fas fa-chevron-circle-up"></i>
+          <hr>
+        </div>
         <!-- JOB DESCRIPTION SECTION-->
         <article class="job-description-section">
           <header="job-description-header">
