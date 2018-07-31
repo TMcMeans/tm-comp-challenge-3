@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="normalize.css">
     <link href="https://fonts.googleapis.com/css?family=Overpass:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- Google Charts Scripts-->
     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
     <script type="text/javascript">
@@ -37,7 +38,7 @@
               easing: 'linear',
               startup: true
           },
-              width: 510,
+              width: 550,
               height: 200,
               legend: 'none',
               colors: ['#3c9ee5'],
@@ -77,30 +78,30 @@
       <section class="side-main-nav">
         <h5>Main</h5>
         <nav>
-          <i class="fas fa-home"></i><a href="#">HOME</a>
-          <i class="fas fa-briefcase"></i><a href="#">JOBS</a>
-          <i class="fas fa-file-alt"></i><a href="#">RESUMES</a>
-          <i class="fas fa-tasks"></i><a href="#">TASKS</a>
-          <i class="far fa-calendar-alt"></i><a href="#">CALENDAR</a>
+          <div class="nav-hover"><i class="fas fa-home"></i><a href="#">HOME</a></div>
+          <div class="nav-hover"><i class="fas fa-briefcase"></i><a href="#">JOBS</a></div>
+          <div class="nav-hover"><i class="fas fa-file-alt"></i><a href="#">RESUMES</a></div>
+          <div class="nav-hover"><i class="fas fa-tasks"></i><a href="#">TASKS</a></div>
+          <div class="nav-hover"><i class="far fa-calendar-alt"></i><a href="#">CALENDAR</a></div>
         </nav>
       </section>
       <section class="admin">
         <h5>Admin</h5>
-          <nav>
-            <i class="fas fa-users"></i><a href="#">USERS</a>
-            <i class="fas fa-map-marker-alt"></i><a href="#">LOCATIONS</a>
-            <i class="fas fa-code-branch"></i><a href="#">WORKFLOWS</a>
-            <i class="fas fa-chalkboard"></i><a href="#">JOB BOARDS</a>
-            <i class="far fa-comments"></i><a href="#">SOCIAL</a>
+        <nav>
+          <div class="nav-hover"><i class="fas fa-users"></i><a href="#">USERS</a></div>
+          <div class="nav-hover"><i class="fas fa-map-marker-alt"></i><a href="#">LOCATIONS</a></div>
+          <div class="nav-hover"><i class="fas fa-code-branch"></i><a href="#">WORKFLOWS</a></div>
+          <div class="nav-hover"><i class="fas fa-chalkboard"></i><a href="#">JOB BOARDS</a></div>
+          <div class="nav-hover"><i class="far fa-comments"></i><a href="#">SOCIAL</a></div>
           </nav>
       </section>
       <section class="categories">
         <h5>Categories</h5>
         <nav>
-          <i class="fas fa-check-square"></i><a>Administrative</a>
-          <i class="fas fa-square"></i><a>Design</a>
-          <i class="fas fa-square"></i><a>Executive</a>
-          <i class="fas fa-square"></i><a>Human Resources</a>
+          <div class="nav-hover"><i class="fas orange fa-check-square"></i><a>Administrative</a></div>
+          <div class="nav-hover"><i class="fas blue fa-square"></i><a>Design</a></div>
+          <div class="nav-hover"><i class="fas  red fa-square"></i><a>Executive</a></div>
+          <div class="nav-hover"><i class="fas green fa-square"></i><a>Human Resources</a></div>
       </nav>
       </section>
     </aside>
@@ -137,13 +138,13 @@
         </section>
         <section class="main-nav">
           <nav>
-            <a href="#">SUMMARY</a>
-            <a href="#">APPLICANTS</a>
-            <a href="#">JOB BOARD</a>
-            <a href="#">INTERVIEWS</a>
-            <a href="#">ACTIVITY</a>
-            <a href="#">BROADCAST</a>
-            <a href="#">NOTIFICATIONS</a>
+            <a href="#" class="summary">SUMMARY</a>
+            <a href="#" class="applicants-link">APPLICANTS</a>
+            <a href="#" class="job-board">JOB BOARD</a>
+            <a href="#" class="interviews-link">INTERVIEWS</a>
+            <a href="#" class="activity">ACTIVITY</a>
+            <a href="#" class="broadcast">BROADCAST</a>
+            <a href="#" class="notifications">NOTIFICATIONS</a>
           </nav>
         </section>
       </header>
@@ -242,7 +243,9 @@
               <p>UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you.</p>
               <hr>
               <h4 class="hiring-lead-title">HIRING LEAD</h4>
-              <p><img src="#" alt="hiring lead profile image">Steve Jobs</p>
+              <div class="hiring-lead-wrapper" role="styling wrapper for hiring lead section">
+                <img class="hiring-lead" src="assets/download.jpg" alt="hiring lead profile image"><p>Beyonce</p>
+              </div>
               <hr>
               <h4 class="approved-salary-title">APPROVED SALARY</h4>
               <p>$350,000</p>
@@ -276,5 +279,6 @@
       </main>
     </div>
   </div>
+  <script type="text/javascript" src="scripts.js"></script>
   </body>
 </html>
