@@ -71,11 +71,11 @@
     <!-- SIDEBAR -->
   <div class="outer-body-wrapper" role="outer body styling container">
     <aside class="sidebar">
-      <section class="profile">
+      <section class="profile" aria-label="profile section">
         <img src="assets/TanjMcMeans.jpg" alt="user profile image">
         <h4>Tanj McMeans <i class="fas fa-caret-down"></i></h4>
       </section>
-      <section class="side-main-nav">
+      <section class="side-main-nav" aria-label="side navigation section">
         <h5>Main</h5>
         <nav>
           <div class="nav-hover"><i class="fas fa-home"></i><a href="#">HOME</a></div>
@@ -85,7 +85,7 @@
           <div class="nav-hover"><i class="far fa-calendar-alt"></i><a href="#">CALENDAR</a></div>
         </nav>
       </section>
-      <section class="admin">
+      <section class="admin" aria-label="admin section">
         <h5>Admin</h5>
         <nav>
           <div class="nav-hover"><i class="fas fa-users"></i><a href="#">USERS</a></div>
@@ -95,7 +95,7 @@
           <div class="nav-hover"><i class="far fa-comments"></i><a href="#">SOCIAL</a></div>
           </nav>
       </section>
-      <section class="categories">
+      <section class="categories" aria-label="admin categories section">
         <h5>Categories</h5>
         <nav>
           <div class="nav-hover"><i class="fas orange fa-check-square"></i><a>Administrative</a></div>
@@ -108,12 +108,12 @@
     <!-- HEADER --> 
     <div class="inner-body-wrapper" role="inner body styling container">
       <header class="top-header">
-        <section class="search-bar">
+        <section class="search-bar" aria-label="top header search section">
           <div class="hamburger-wrapper" role="container for hamburger menu">
             <i class="fas fa-caret-left"></i>
             <i class="fas fa-bars"></i>
           </div>
-          <form class="search" role="search bar">
+          <form class="search" role="search bar" aria-label="search bar">
             <i class="fas fa-search"></i>
             <input id="search-bar" type="search" placeholder="Search for a job, task or resume">
           </form>
@@ -121,7 +121,7 @@
           <i class="far fa-calendar-plus"></i>
           <i class="fas fa-th"></i>
         </section>
-        <section class="title-group">
+        <section class="title-group" aria-label="job title section">
           <h1>UI/UX Engineer</h1>
           <div class="location-marker-wrapper" role="location marker wrapper"> 
             <i class="fas fa-map-marker-alt"></i><p>New York, NY</p><i class="fas fa-circle"></i>
@@ -136,7 +136,7 @@
             </div>
           </div>
         </section>
-        <section class="main-nav">
+        <section class="main-nav" aria-label="main navigation section">
           <nav>
             <a href="#" class="summary">SUMMARY</a>
             <a href="#" class="applicants-link">APPLICANTS</a>
@@ -150,7 +150,7 @@
       </header>
       <main>
         <!-- STATS SECTION -->
-        <section class="stats-section">
+        <section class="stats-section" aria-label="stats section">
           <div class="pie-chart-section">
             <div class="stats-flex-wrapper">
               <div class="single-chart">
@@ -223,7 +223,7 @@
               <h3>JOB DESCRIPTION</h3>
               <button class="job-edit-btn"><i class="fas fa-pencil-alt"></i>EDIT</button>
             </header>
-            <section class="job-details">
+            <section class="job-details" aria-label="job details section">
               <h4 class="position-title">POSITION TITLE</h4>
               <p>UI/UX Engineer</p>
               <hr>
@@ -240,7 +240,7 @@
               <p>Open</p>
               <hr>
               <h4 class="description-title">DESCRIPTION</h4>
-              <p>UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you.</p>
+              <p class="ui-job-details">UI/UX Developer responsibilities include gathering user requirements, designing graphic elements and building navigation components. To be successful in this role, you should have experience with design software and wireframe tools. If you also have a portfolio of professional design projects that includes work with web/mobile applications, and are a creative problem-solver who is passionate about creating innovative, elegant solutions, we’d like to meet you.</p>
               <hr>
               <h4 class="hiring-lead-title">HIRING LEAD</h4>
               <div class="hiring-lead-wrapper" role="styling wrapper for hiring lead section">
@@ -257,21 +257,21 @@
             <button class="linkedin-btn"><i class="fab fa-linkedin"></i>Post to LinkedIn</button>
             <h3><i class="fas fa-globe-asia"></i>Link to this Job</h3>
             <p class="social-section-text">Share this job posting with others looking for this position by copying the active link below.</p>
-            <form class="job-link" role="job link">
+            <form class="job-link" role="job link" aria-label="copy job link">
               <input id="job-link" type="text" name="job-link" placeholder="https://www.sharelink.com">
               <button class="copy-btn">Copy</button>
             </form>
             <hr>
             <h3><i class="fas fa-camera-retro"></i> Use the Button Widget</h3>
             <p class="social-section-text">This widget embeds the buttons for sharing the job for submitting a resume on your website.</p>
-            <form class="share-widget" role="share widget">
+            <form class="share-widget" role="share widget" aria-label="share job link">
               <input id="share-job" type="text" name="share-job" placeholder="<script>javascript_src=share-job</script>">
               <button class="copy-btn">Copy</button>
             </form>
             <hr>
             <h3><i class="fas fa-paper-plane"></i> Upload Resumes by Email</h3>
             <p class="social-section-text">You can automatically upload multiple resumes to this job by emailing the address below.</p>
-            <form class="upload-resume" role="resume upload">
+            <form class="upload-resume" role="resume upload" aria-label="upload a resume">
               <input id="email-resume" type="text" name="email-resume" placeholder="soAndso@gmail.com">
             </form>
           </aside>

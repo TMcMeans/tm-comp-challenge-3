@@ -312,6 +312,11 @@ main {
 
 .divider-line i {
   font-size: 1.5em;
+  cursor: pointer;
+}
+
+.divider-line i:hover {
+  color: #3c9ee5;
 }
 
 .stats-section {
@@ -494,6 +499,11 @@ main {
   color: #3D4656;
 }
 
+.ui-job-details {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
 .job-details hr {
   grid-column: 1 / span 4;
   width: 100%;
@@ -668,6 +678,10 @@ main {
   .main-nav {
     width: 90%;
     font-size: 0.9em;
+    margin-top: 0;
+  }
+  .main-nav nav {
+    height: 100px;
   }
   .main-nav a:hover {
     border-bottom: none;
@@ -1078,8 +1092,8 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     padding-bottom: 0;
-    font-size: 0.75em;
-    width: 100%;
+    font-size: 0.9em;
+    width: 80%;
   }
   .summary {
     grid-column: 1;
@@ -1095,19 +1109,19 @@ main {
   }
   .interviews-link {
     grid-column: 1;
-    grid-row: 3;
+    grid-row: 2;
   }
   .activity {
-    grid-column: 1;
-    grid-row: 2;
-  } 
-  .broadcast {
     grid-column: 2;
     grid-row: 2;
   } 
-  .notifications {
+  .broadcast {
     grid-column: 3;
     grid-row: 2;
+  } 
+  .notifications {
+    grid-column: 1;
+    grid-row: 3;
   }
   .pie-chart-section {
     height: 250px;
