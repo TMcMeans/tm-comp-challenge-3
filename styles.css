@@ -228,6 +228,7 @@ hr {
 .location-marker-wrapper .fa-circle {
   font-size: 5px;
   margin-right: 10px;
+  display: none;
 }
 
 .header-buttons-wrapper {
@@ -406,6 +407,7 @@ main {
 
 .totals-btn .fa-circle {
   font-size: 5px;
+  display: none;
 }
 
 .bar-graph-section {
@@ -1092,7 +1094,7 @@ main {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     padding-bottom: 0;
-    font-size: 0.9em;
+    font-size: 0.76em;
     width: 80%;
   }
   .summary {
